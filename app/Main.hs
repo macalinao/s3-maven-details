@@ -23,7 +23,7 @@ makeArtifactFromComponents components
       version = last parts
       orgAndArtifact = init parts
       artifactId = last orgAndArtifact
-      organizationId = T.intercalate (T.pack ".") $ init parts
+      organizationId = T.intercalate (T.pack ".") $ init orgAndArtifact
     in
       Just $ Artifact artifactId organizationId $ Version version
 
